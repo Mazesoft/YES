@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PescaditoDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="PescaditoDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="InvCantidadPorTacoes" EntityType="PescaditoDBModel.InvCantidadPorTaco" />
+    <EntitySet Name="InvInventarios" EntityType="PescaditoDBModel.InvInventario" />
+    <EntitySet Name="InvProductos" EntityType="PescaditoDBModel.InvProducto" />
+    <EntitySet Name="InvUnidadMeds" EntityType="PescaditoDBModel.InvUnidadMed" />
+    <EntitySet Name="Menus" EntityType="PescaditoDBModel.Menu" />
+    <EntitySet Name="Orders" EntityType="PescaditoDBModel.Order" />
+    <EntitySet Name="OrderDetails" EntityType="PescaditoDBModel.OrderDetail" />
+    <EntitySet Name="sysdiagrams" EntityType="PescaditoDBModel.sysdiagram" />
+    <EntitySet Name="Users" EntityType="PescaditoDBModel.User" />
+    <EntitySet Name="UsersTypes" EntityType="PescaditoDBModel.UsersType" />
+    <AssociationSet Name="FK_Inventario_CantidadPorTaco" Association="PescaditoDBModel.FK_Inventario_CantidadPorTaco">
+      <End Role="InvCantidadPorTaco" EntitySet="InvCantidadPorTacoes" />
+      <End Role="InvInventario" EntitySet="InvInventarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_Productos" Association="PescaditoDBModel.FK_Inventario_Productos">
+      <End Role="InvProducto" EntitySet="InvProductos" />
+      <End Role="InvInventario" EntitySet="InvInventarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_UnidadMed" Association="PescaditoDBModel.FK_Inventario_UnidadMed">
+      <End Role="InvUnidadMed" EntitySet="InvUnidadMeds" />
+      <End Role="InvInventario" EntitySet="InvInventarios" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="InvCantidadPorTaco">
+    <Key>
+      <PropertyRef Name="IdCantTaco" />
+    </Key>
+    <Property Name="IdCantTaco" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cantidad" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="InvInventarios" Relationship="PescaditoDBModel.FK_Inventario_CantidadPorTaco" FromRole="InvCantidadPorTaco" ToRole="InvInventario" />
+  </EntityType>
+  <EntityType Name="InvInventario">
+    <Key>
+      <PropertyRef Name="IdInventario" />
+    </Key>
+    <Property Name="IdInventario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdProducto" Type="Int32" Nullable="false" />
+    <Property Name="Cantidad" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="IdUnidad" Type="Int32" Nullable="false" />
+    <Property Name="Precio" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="IdCantTaco" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="InvCantidadPorTaco" Relationship="PescaditoDBModel.FK_Inventario_CantidadPorTaco" FromRole="InvInventario" ToRole="InvCantidadPorTaco" />
+    <NavigationProperty Name="InvProducto" Relationship="PescaditoDBModel.FK_Inventario_Productos" FromRole="InvInventario" ToRole="InvProducto" />
+    <NavigationProperty Name="InvUnidadMed" Relationship="PescaditoDBModel.FK_Inventario_UnidadMed" FromRole="InvInventario" ToRole="InvUnidadMed" />
+  </EntityType>
+  <EntityType Name="InvProducto">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Producto" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="InvInventarios" Relationship="PescaditoDBModel.FK_Inventario_Productos" FromRole="InvProducto" ToRole="InvInventario" />
+  </EntityType>
+  <EntityType Name="InvUnidadMed">
+    <Key>
+      <PropertyRef Name="IdUnidad" />
+    </Key>
+    <Property Name="IdUnidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Unidad" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="UnidadDesc" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="InvInventarios" Relationship="PescaditoDBModel.FK_Inventario_UnidadMed" FromRole="InvUnidadMed" ToRole="InvInventario" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="IdMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdTipo" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="IdOrder" />
+    </Key>
+    <Property Name="IdOrder" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUser" Type="Int32" Nullable="false" />
+    <Property Name="IdPromo" Type="Int32" />
+    <Property Name="ClientName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Qty" Type="Int32" />
+    <Property Name="FinalAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="dDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="bActive" Type="Boolean" />
+    <Property Name="OrderNum" Type="Int32" />
+    <Property Name="IdParent" Type="Int32" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="IdOrderDetail" />
+    </Key>
+    <Property Name="IdOrderDetail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdOrder" Type="Int32" Nullable="false" />
+    <Property Name="IdMenu" Type="Int32" Nullable="false" />
+    <Property Name="Qty" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUserType" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UsersType">
+    <Key>
+      <PropertyRef Name="IdUserType" />
+    </Key>
+    <Property Name="IdUserType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Inventario_CantidadPorTaco">
+    <End Type="PescaditoDBModel.InvCantidadPorTaco" Role="InvCantidadPorTaco" Multiplicity="1" />
+    <End Type="PescaditoDBModel.InvInventario" Role="InvInventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvCantidadPorTaco">
+        <PropertyRef Name="IdCantTaco" />
+      </Principal>
+      <Dependent Role="InvInventario">
+        <PropertyRef Name="IdCantTaco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_Productos">
+    <End Type="PescaditoDBModel.InvProducto" Role="InvProducto" Multiplicity="1" />
+    <End Type="PescaditoDBModel.InvInventario" Role="InvInventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvProducto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="InvInventario">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_UnidadMed">
+    <End Type="PescaditoDBModel.InvUnidadMed" Role="InvUnidadMed" Multiplicity="1" />
+    <End Type="PescaditoDBModel.InvInventario" Role="InvInventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvUnidadMed">
+        <PropertyRef Name="IdUnidad" />
+      </Principal>
+      <Dependent Role="InvInventario">
+        <PropertyRef Name="IdUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

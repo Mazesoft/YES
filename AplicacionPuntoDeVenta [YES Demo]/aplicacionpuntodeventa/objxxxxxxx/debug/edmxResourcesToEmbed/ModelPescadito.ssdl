@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PescaditoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="InvCantidadPorTaco">
+    <Key>
+      <PropertyRef Name="IdCantTaco" />
+    </Key>
+    <Property Name="IdCantTaco" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvInventario">
+    <Key>
+      <PropertyRef Name="IdInventario" />
+    </Key>
+    <Property Name="IdInventario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdProducto" Type="int" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IdUnidad" Type="int" Nullable="false" />
+    <Property Name="Precio" Type="money" Nullable="false" />
+    <Property Name="IdCantTaco" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvProductos">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Producto" Type="nvarchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InvUnidadMed">
+    <Key>
+      <PropertyRef Name="IdUnidad" />
+    </Key>
+    <Property Name="IdUnidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Unidad" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="UnidadDesc" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Menu">
+    <Key>
+      <PropertyRef Name="IdMenu" />
+    </Key>
+    <Property Name="IdMenu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTipo" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="UnitPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="IdOrder" />
+    </Key>
+    <Property Name="IdOrder" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUser" Type="int" Nullable="false" />
+    <Property Name="IdPromo" Type="int" />
+    <Property Name="ClientName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="FinalAmount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="dDateTime" Type="datetime" Nullable="false" />
+    <Property Name="bActive" Type="bit" />
+    <Property Name="OrderNum" Type="int" />
+    <Property Name="IdParent" Type="int" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="IdOrderDetail" />
+    </Key>
+    <Property Name="IdOrderDetail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdOrder" Type="int" Nullable="false" />
+    <Property Name="IdMenu" Type="int" Nullable="false" />
+    <Property Name="Qty" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="IdUser" />
+    </Key>
+    <Property Name="IdUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUserType" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsersType">
+    <Key>
+      <PropertyRef Name="IdUserType" />
+    </Key>
+    <Property Name="IdUserType" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Inventario_CantidadPorTaco">
+    <End Role="InvCantidadPorTaco" Type="Self.InvCantidadPorTaco" Multiplicity="1" />
+    <End Role="InvInventario" Type="Self.InvInventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvCantidadPorTaco">
+        <PropertyRef Name="IdCantTaco" />
+      </Principal>
+      <Dependent Role="InvInventario">
+        <PropertyRef Name="IdCantTaco" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_Productos">
+    <End Role="InvProductos" Type="Self.InvProductos" Multiplicity="1" />
+    <End Role="InvInventario" Type="Self.InvInventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvProductos">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="InvInventario">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inventario_UnidadMed">
+    <End Role="InvUnidadMed" Type="Self.InvUnidadMed" Multiplicity="1" />
+    <End Role="InvInventario" Type="Self.InvInventario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InvUnidadMed">
+        <PropertyRef Name="IdUnidad" />
+      </Principal>
+      <Dependent Role="InvInventario">
+        <PropertyRef Name="IdUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PescaditoDBModelStoreContainer">
+    <EntitySet Name="InvCantidadPorTaco" EntityType="Self.InvCantidadPorTaco" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvInventario" EntityType="Self.InvInventario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvProductos" EntityType="Self.InvProductos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InvUnidadMed" EntityType="Self.InvUnidadMed" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsersType" EntityType="Self.UsersType" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Inventario_CantidadPorTaco" Association="Self.FK_Inventario_CantidadPorTaco">
+      <End Role="InvCantidadPorTaco" EntitySet="InvCantidadPorTaco" />
+      <End Role="InvInventario" EntitySet="InvInventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_Productos" Association="Self.FK_Inventario_Productos">
+      <End Role="InvProductos" EntitySet="InvProductos" />
+      <End Role="InvInventario" EntitySet="InvInventario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inventario_UnidadMed" Association="Self.FK_Inventario_UnidadMed">
+      <End Role="InvUnidadMed" EntitySet="InvUnidadMed" />
+      <End Role="InvInventario" EntitySet="InvInventario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

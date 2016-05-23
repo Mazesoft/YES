@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D63386CC-BE06-4B52-B77C-D13601A05B1E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AplicacionPuntoDeVenta</RootNamespace>
+    <AssemblyName>AplicacionPuntoDeVenta</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ElPescadito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElPescadito.Designer.cs">
+      <DependentUpon>ElPescadito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="En-De-Crypt.cs" />
+    <Compile Include="FormActiveOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActiveOrders.Designer.cs">
+      <DependentUpon>FormActiveOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChefView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChefView.Designer.cs">
+      <DependentUpon>FormChefView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGenSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGenSearch.Designer.cs">
+      <DependentUpon>FormGenSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInventory.Designer.cs">
+      <DependentUpon>FormInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrders.Designer.cs">
+      <DependentUpon>FormOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsers.Designer.cs">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvCantidadPorTaco.cs">
+      <DependentUpon>ModelPescadito.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvInventario.cs">
+      <DependentUpon>ModelPescadito.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvProducto.cs">
+      <DependentUpon>ModelPescadito.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InvUnidadMed.cs">
+      <DependentUpon>ModelPescadito.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ.cs" />
+    <Compile Include="Menu.cs">
+      <DependentUpon>ModelPescadito.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelPescadito.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPescadito.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelPescadito.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPescadito.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelPescadito.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPescadito.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>ModelPescadito.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.cs">
+      <DependentUpon>ModelPescadito.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SPSQL.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>ModelPescadito.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>ModelPescadito.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsersType.cs">
+      <DependentUpon>ModelPescadito.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ElPescadito.resx">
+      <DependentUpon>ElPescadito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormActiveOrders.resx">
+      <DependentUpon>FormActiveOrders.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChefView.resx">
+      <DependentUpon>FormChefView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGenSearch.resx">
+      <DependentUpon>FormGenSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInventory.resx">
+      <DependentUpon>FormInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrders.resx">
+      <DependentUpon>FormOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsers.resx">
+      <DependentUpon>FormUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="ModelPescadito.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelPescadito.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelPescadito.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelPescadito.edmx</DependentUpon>
+      <LastGenOutput>ModelPescadito.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ModelPescadito.edmx.diagram">
+      <DependentUpon>ModelPescadito.edmx</DependentUpon>
+    </None>
+    <None Include="ModelPescadito.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelPescadito.edmx</DependentUpon>
+      <LastGenOutput>ModelPescadito.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\YES.jpg" />
+    <None Include="Resources\374296.jpg" />
+    <Content Include="Resources\icon_delete.png" />
+    <Content Include="Resources\icon_Save.png" />
+    <None Include="Resources\intropescadito.png" />
+    <Content Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PescaditoDBModelStoreContainer" CdmEntityContainer="PescaditoDBEntities">
+    <EntitySetMapping Name="InvCantidadPorTacoes">
+      <EntityTypeMapping TypeName="PescaditoDBModel.InvCantidadPorTaco">
+        <MappingFragment StoreEntitySet="InvCantidadPorTaco">
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="IdCantTaco" ColumnName="IdCantTaco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvInventarios">
+      <EntityTypeMapping TypeName="PescaditoDBModel.InvInventario">
+        <MappingFragment StoreEntitySet="InvInventario">
+          <ScalarProperty Name="IdCantTaco" ColumnName="IdCantTaco" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="IdUnidad" ColumnName="IdUnidad" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="IdInventario" ColumnName="IdInventario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvProductos">
+      <EntityTypeMapping TypeName="PescaditoDBModel.InvProducto">
+        <MappingFragment StoreEntitySet="InvProductos">
+          <ScalarProperty Name="Producto" ColumnName="Producto" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvUnidadMeds">
+      <EntityTypeMapping TypeName="PescaditoDBModel.InvUnidadMed">
+        <MappingFragment StoreEntitySet="InvUnidadMed">
+          <ScalarProperty Name="UnidadDesc" ColumnName="UnidadDesc" />
+          <ScalarProperty Name="Unidad" ColumnName="Unidad" />
+          <ScalarProperty Name="IdUnidad" ColumnName="IdUnidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Menus">
+      <EntityTypeMapping TypeName="PescaditoDBModel.Menu">
+        <MappingFragment StoreEntitySet="Menu">
+          <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IdTipo" ColumnName="IdTipo" />
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="PescaditoDBModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="IdParent" ColumnName="IdParent" />
+          <ScalarProperty Name="OrderNum" ColumnName="OrderNum" />
+          <ScalarProperty Name="bActive" ColumnName="bActive" />
+          <ScalarProperty Name="dDateTime" ColumnName="dDateTime" />
+          <ScalarProperty Name="FinalAmount" ColumnName="FinalAmount" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="ClientName" ColumnName="ClientName" />
+          <ScalarProperty Name="IdPromo" ColumnName="IdPromo" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="PescaditoDBModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetail">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="IdMenu" ColumnName="IdMenu" />
+          <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
+          <ScalarProperty Name="IdOrderDetail" ColumnName="IdOrderDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="PescaditoDBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="PescaditoDBModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdUserType" ColumnName="IdUserType" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersTypes">
+      <EntityTypeMapping TypeName="PescaditoDBModel.UsersType">
+        <MappingFragment StoreEntitySet="UsersType">
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="IdUserType" ColumnName="IdUserType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

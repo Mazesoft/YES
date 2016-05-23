@@ -1,0 +1,44 @@
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\bin\Debug\AplicacionPuntoDeVenta.exe.config
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\bin\Debug\AplicacionPuntoDeVenta.exe
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\bin\Debug\AplicacionPuntoDeVenta.pdb
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\bin\Debug\EntityFramework.dll
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\bin\Debug\EntityFramework.xml
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.ElPescadito.resources
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormActiveOrders.resources
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormChefView.resources
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormGenSearch.resources
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormInventory.resources
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormLogin.resources
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormMenu.resources
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormOrders.resources
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormUsers.resources
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.Properties.Resources.resources
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.csproj.GenerateResource.Cache
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.exe
+C:\Users\uidg3909\Documents\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.pdb
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\bin\Debug\AplicacionPuntoDeVenta.exe.config
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.exe
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVentaV4\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.pdb
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\bin\Debug\AplicacionPuntoDeVenta.exe.config
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.exe
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.pdb
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\bin\Debug\AplicacionPuntoDeVenta.exe
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\bin\Debug\AplicacionPuntoDeVenta.pdb
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\bin\Debug\EntityFramework.dll
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\bin\Debug\EntityFramework.xml
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.csprojResolveAssemblyReference.cache
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.ElPescadito.resources
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormActiveOrders.resources
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormChefView.resources
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormGenSearch.resources
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormInventory.resources
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormLogin.resources
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormMenu.resources
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormOrders.resources
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.FormUsers.resources
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.Properties.Resources.resources
+C:\Users\Renato Wong\Dropbox\MAZESOFT\Proyectos\El Pescadito\GitHub\Pescadito\PescaditoApp\AplicacionPuntoDeVenta [YES Demo]\AplicacionPuntoDeVenta\obj\Debug\AplicacionPuntoDeVenta.csproj.GenerateResource.Cache
